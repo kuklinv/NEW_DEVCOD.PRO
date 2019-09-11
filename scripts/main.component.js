@@ -1,6 +1,8 @@
-import {NavigationComponent} from "./navigation.component/navigation.component.js";
-import {HeaderComponent} from "./header.component/header.component.js";
-import {FooterComponent} from "./footer.component/footer.component.js";
+import {NavigationComponent} from "./navigationComponent/navigation.component.js";
+import {HeaderComponent} from "./headerComponent/header.component.js";
+import {FooterComponent} from "./footerComponent/footer.component.js";
+import {PagesContentComponent} from "./pagesComponent/pagesContent.component.js";
+
 
 export class MainComponent {
     constructor({element}) {
@@ -9,6 +11,7 @@ export class MainComponent {
         this._initNavigation();
         this._initHeader();
         this._initFooter();
+        this._initPagesContent();
     }
 
     _initNavigation() {
@@ -29,6 +32,12 @@ export class MainComponent {
         })
     }
 
+    _initPagesContent() {
+        this._pageContent = new PagesContentComponent({
+            element: this._element.querySelector('.pageContent')
+        })
+    }
+
     _render() {
         this._element.innerHTML = `
     <div id="decorative2" class="navigation"></div>
@@ -37,31 +46,11 @@ export class MainComponent {
 
     <div id="contentOuterSeparator"></div>
 
-    <div class="container-fluid mainPageContent">
+    <div class="container-fluid pageContent"></div>
 
-        <div class="divPanel page-content">
+    <div id="footerOuterSeparator"></div>
 
-            <div class="row-fluid">
-
-                <div class="span12" id="divMain">
-
-                    <div class="span4 sidebar">
-
-                        <div class="sidebox">
-                            <h3 class="sidebox-title">DEVCOD.PRO</h3>
-                            <p>Я Виталий Куклин, веб-разработчик. Это моя личная страничка = (все в одном) =>
-                                визитная карточка, экспериментальная площадка, учебная песочница и портфолио</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-<div id="footerOuterSeparator"></div>
-
-<div id="divFooter" class="myFooter"></div>
+    <div id="divFooter" class="myFooter"></div>
         `;
     }
 }
