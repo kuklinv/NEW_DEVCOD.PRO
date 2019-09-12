@@ -1,7 +1,8 @@
 import {NavigationComponent} from "./navigationComponent/navigation.component.js";
 import {HeaderComponent} from "./headerComponent/header.component.js";
 import {FooterComponent} from "./footerComponent/footer.component.js";
-import {PagesContentComponent} from "./pagesComponent/pagesContent.component.js";
+// import {PagesContentComponent} from "./pagesComponent/pagesContent.component.js";
+import {HomeComponent} from "./pagesComponent/pagesContent/home.component.js";
 
 
 export class MainComponent {
@@ -11,7 +12,8 @@ export class MainComponent {
         this._initNavigation();
         this._initHeader();
         this._initFooter();
-        this._initPagesContent();
+        init._initHome();
+        // this._initPagesContent();
     }
 
     _initNavigation() {
@@ -32,11 +34,17 @@ export class MainComponent {
         })
     }
 
-    _initPagesContent() {
-        this._pageContent = new PagesContentComponent({
+    _initHome(){
+        this._home = new HomeComponent({
             element: this._element.querySelector('.pageContent')
         })
     }
+
+    // _initPagesContent() {
+    //     this._pageContent = new PagesContentComponent({
+    //         element: this._element.querySelector('.pageContent')
+    //     })
+    // }
 
     _render() {
         this._element.innerHTML = `
