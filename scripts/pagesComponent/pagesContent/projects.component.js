@@ -1,7 +1,7 @@
 
 import {PagesContentComponent} from "../pagesContent.component";
 
-export class SkillsComponent extends PagesContentComponent{
+export class ProjectsComponent extends PagesContentComponent{
     constructor({element}) {
         super({element});
         this._render();

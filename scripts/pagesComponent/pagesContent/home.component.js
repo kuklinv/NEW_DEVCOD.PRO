@@ -1,6 +1,7 @@
-import {BaseComponent} from "../../common/components/base.component.js";
 
-export class HomeComponent extends BaseComponent{
+import {PagesContentComponent} from "../pagesContent.component.js";
+
+export class HomeComponent extends PagesContentComponent{
     constructor({element}){
         super({element});
         this._render();
