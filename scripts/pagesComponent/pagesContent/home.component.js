@@ -19,7 +19,7 @@ export class HomeComponent extends BaseComponent{
 
                         <div class="sidebox">
                             <h3 class="sidebox-title">DEVCOD.PRO</h3>
-                            <p>Я Виталий Куклин, веб-разработчик. Это моя личная страничка = (все в одном) =>
+                            <p>Это моя личная страничка = (все в одном) =>
                                 визитная карточка, экспериментальная площадка, учебная песочница и портфолио</p>
                         </div>
                     </div>

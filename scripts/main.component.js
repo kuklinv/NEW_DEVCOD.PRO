@@ -12,7 +12,7 @@ export class MainComponent {
         this._initNavigation();
         this._initHeader();
         this._initFooter();
-        init._initHome();
+        this._initHome();
         // this._initPagesContent();
     }
 
