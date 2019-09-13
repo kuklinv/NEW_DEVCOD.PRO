@@ -1,7 +1,25 @@
 export class NavigationComponent {
-    constructor({element}) {
+    constructor({element, naviMenuSelect}) {
         this._element = element;
+        this._naviMenuSelect = naviMenuSelect;
         this._render();
+        this._element.addEventListener('click', function (e) {
+           let target = e.target;
+           if (target.classList.contains('home')) {
+               this._naviMenuSelect(target.className);
+               console.log(target.className);
+           } else if  (target.classList.contains('skills')){
+               console.log(target.className);
+           } else if  (target.classList.contains('sandbox')){
+               console.log(target.className);
+           } else if  (target.classList.contains('projects')){
+               console.log(target.className);
+           } else if  (target.classList.contains('portfolio')){
+               console.log(target.className);
+           } else if  (target.classList.contains('blog')){
+               console.log(target.className);
+           }
+        });
     }
     _render() {
         this._element.innerHTML = `
@@ -17,12 +35,12 @@ export class NavigationComponent {
                             <div class="navbar">
                                 <div class="nav-collapse">
                                     <ul class="nav nav-pills ddmenu">
-                                        <li class="dropdown"><a href="index.html">Home</a></li>
-                                        <li class="dropdown"><a href="#">my skills</a></li>
-                                        <li class="dropdown"><a href="#">my sandbox</a></li>
-                                        <li class="dropdown"><a href="#">projects</a></li>
-                                        <li class="dropdown"><a href="#">portfolio</a></li>
-                                        <li class="dropdown"><a href="#">my blog</a></li>
+                                        <li class="dropdown"><a class="home" href="#">Home</a></li>
+                                        <li class="dropdown "><a class="skills" href="#">my skills</a></li>
+                                        <li class="dropdown "><a class="sandbox" href="#">my sandbox</a></li>
+                                        <li class="dropdown "><a class="projects" href="#">projects</a></li>
+                                        <li class="dropdown "><a class="portfolio" href="#">portfolio</a></li>
+                                        <li class="dropdown "><a class="blog" href="#">my blog</a></li>
                                     </ul>
                                 </div>
                             </div>

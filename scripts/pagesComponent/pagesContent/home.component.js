@@ -9,7 +9,7 @@ export class HomeComponent extends BaseComponent{
     }
     _render() {
         this._element.innerHTML = `
-                <div class="divPanel page-content">
+        <div class="divPanel page-content">
 
             <div class="row-fluid">
 
