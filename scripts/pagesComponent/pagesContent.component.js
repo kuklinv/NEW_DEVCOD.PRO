@@ -6,18 +6,20 @@ import {ProjectsComponent} from "./pagesContent/projects.component.js";
 import {PortfolioComponent} from "./pagesContent/portfolio.component.js";
 import {BlogComponent} from "./pagesContent/blog.component.js";
 
-export class PagesContentComponent extends BaseComponent{
-    constructor({element}){
+let PagesContent = {};
+
+export class PagesContentComponent extends BaseComponent {
+    constructor({element, showComponent}) {
         super({element});
         // this._render();
-        // this._naviMenuSelect = naviMenuSelect;
+        // this._showComponent = showComponent;
+        // console.log(this._showComponent);
         this._initBlog();
         this._initPortfolio();
         this._initProjects();
         this._initSandbox();
         this._initSkills();
         this._initHome();
-
     }
 
     show({element}) {
@@ -27,38 +29,38 @@ export class PagesContentComponent extends BaseComponent{
 
     _initHome() {
         this._home = new HomeComponent({
-            element:this._element
+            element: this._element
         });
     }
+
     _initSkills() {
         this.skills = new SkillsComponent({
             element: this._element
         })
     }
+
     _initSandbox() {
         this.skills = new SandboxComponent({
             element: this._element
         })
     }
+
     _initProjects() {
         this.skills = new ProjectsComponent({
             element: this._element
         })
     }
+
     _initPortfolio() {
         this.skills = new PortfolioComponent({
             element: this._element
         })
     }
+
     _initBlog() {
         this.skills = new BlogComponent({
             element: this._element
         })
     }
 
-    // _render() {
-    //     this._element.innerHTML = `
-    //
-    //     `;
-    // }
 }
