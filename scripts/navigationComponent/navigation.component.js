@@ -1,24 +1,33 @@
-export class NavigationComponent {
-    constructor({element, naviMenuSelect}) {
-        this._element = element;
-        this._naviMenuSelect = naviMenuSelect;
+import {BaseComponent} from "../common/components/base.component.js";
+
+export class NavigationComponent extends BaseComponent{
+    constructor({element, navMenuSelect}) {
+        super({element});
+        this._navMenuSelect = navMenuSelect;
         this._render();
-        this._element.addEventListener('click', function (e) {
-           let target = e.target;
-           if (target.classList.contains('home')) {
-               this._naviMenuSelect(target.className);
-               console.log(target.className);
-           } else if  (target.classList.contains('skills')){
-               console.log(target.className);
-           } else if  (target.classList.contains('sandbox')){
-               console.log(target.className);
-           } else if  (target.classList.contains('projects')){
-               console.log(target.className);
-           } else if  (target.classList.contains('portfolio')){
-               console.log(target.className);
-           } else if  (target.classList.contains('blog')){
-               console.log(target.className);
-           }
+        this._element.querySelector('.home').addEventListener('click', (e) => {
+            let target = e.target;
+            return this._navMenuSelect(target.className);
+        });
+        this._element.querySelector('.skills').addEventListener('click', (e) => {
+            let target = e.target;
+            return this._navMenuSelect(target.className);
+        });
+        this._element.querySelector('.sandbox').addEventListener('click', (e) => {
+            let target = e.target;
+            return this._navMenuSelect(target.className);
+        });
+        this._element.querySelector('.projects').addEventListener('click', (e) => {
+            let target = e.target;
+            return this._navMenuSelect(target.className);
+        });
+        this._element.querySelector('.portfolio').addEventListener('click', (e) => {
+            let target = e.target;
+            return this._navMenuSelect(target.className);
+        });
+        this._element.querySelector('.blog').addEventListener('click', (e) => {
+            let target = e.target;
+            return this._navMenuSelect(target.className);
         });
     }
     _render() {

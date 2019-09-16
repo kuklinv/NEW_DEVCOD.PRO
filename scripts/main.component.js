@@ -3,27 +3,30 @@ import {HeaderComponent} from "./headerComponent/header.component.js";
 import {FooterComponent} from "./footerComponent/footer.component.js";
 import {PagesContentComponent} from "./pagesComponent/pagesContent.component.js";
 
-// import {HomeComponent} from "./pagesComponent/pagesContent/home.component.js";
-
+// let currentShowComponent;
 
 export class MainComponent {
     constructor({element}) {
         this._element = element;
+        // this._currentShowComponent;
         this._render();
         this._initNavigation();
         this._initHeader();
         this._initFooter();
-        // this._initHome();
         this._initPagesContent();
     }
 
     _initNavigation() {
         this._navigation = new NavigationComponent({
             element: this._element.querySelector('.navigation'),
-            naviMenuSelect: (menuItem) => {
-                this._pageContent.show(menuItem);
+            navMenuSelect: (menuItem) => {
+                // this._pageContent.show(menuItem);
+                // this._currentShowComponent = menuItem;
+                // console.log(currentShowComponent);
+                this._pageContent.showComponent = menuItem;
+                console.log(this._pageContent.showComponent)
             }
-        })
+        });
     }
 
     _initHeader() {
@@ -38,16 +41,10 @@ export class MainComponent {
         })
     }
 
-    // _initHome(){
-    //     this._home = new HomeComponent({
-    //         element: this._element.querySelector('.pageContent')
-    //     })
-    // }
-
     _initPagesContent() {
         this._pageContent = new PagesContentComponent({
             element: this._element.querySelector('.pageContent')
-        })
+        });
     }
 
     _render() {
