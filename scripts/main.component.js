@@ -14,6 +14,8 @@ export class MainComponent {
         this._initHeader();
         this._initFooter();
         this._initPagesContent();
+
+        // this._selectPageContent(this._navigation._selectedMenu);
     }
 
     _initNavigation() {
@@ -23,8 +25,10 @@ export class MainComponent {
                 // this._pageContent.show(menuItem);
                 // this._currentShowComponent = menuItem;
                 // console.log(currentShowComponent);
-                this._pageContent.showComponent = menuItem;
-                console.log(this._pageContent.showComponent)
+                // this._pageContent.showComponent = menuItem;
+                // console.log(this._pageContent.showComponent)
+                this._selectedMenu = menuItem;
+                console.log(this._selectedMenu)
             }
         });
     }
@@ -44,6 +48,7 @@ export class MainComponent {
     _initPagesContent() {
         this._pageContent = new PagesContentComponent({
             element: this._element.querySelector('.pageContent')
+            // showComponent: this._selectedMenu
         });
     }
 
@@ -62,4 +67,13 @@ export class MainComponent {
     <div id="divFooter" class="myFooter"></div>
         `;
     }
+
+    // _selectPageContent(selectedMenu) {
+    //     console.log(selectedMenu);
+        // if (selectedMenu === 'skills') {
+        //     this._pageContent._skills._render();
+        // }
+    // }
 }
+
+// console.log(MainComponent);
