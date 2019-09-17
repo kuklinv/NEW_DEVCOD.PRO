@@ -9,7 +9,6 @@ export class BlogComponent extends BaseComponent{
     }
     _render() {
         this._element.innerHTML = `
-                this._element.innerHTML = \`
                 <div class="divPanel page-content">
 
             <div class="row-fluid">
