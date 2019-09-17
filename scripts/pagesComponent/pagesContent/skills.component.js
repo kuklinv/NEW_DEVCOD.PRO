@@ -1,5 +1,4 @@
 
-// import {PagesContentComponent} from "../pagesContent.component.js";
 import {BaseComponent} from "../../common/components/base.component.js";
 
 export class SkillsComponent extends BaseComponent{
