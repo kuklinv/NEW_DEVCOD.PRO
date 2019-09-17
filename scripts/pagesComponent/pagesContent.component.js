@@ -25,7 +25,7 @@ export class PagesContentComponent extends BaseComponent {
 
 
     show({element}) {
-        this._element.showComponent._render();
+        this._element._render();
         super.show();
     }
 
