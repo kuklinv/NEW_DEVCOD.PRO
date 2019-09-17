@@ -14,6 +14,7 @@ export class PagesContentComponent extends BaseComponent {
         // this._render();
         // this._showComponent = showComponent;
         // console.log(this._showComponent);
+        // console.log(showComponent);
         this._initBlog();
         this._initPortfolio();
         this._initProjects();
@@ -22,8 +23,9 @@ export class PagesContentComponent extends BaseComponent {
         this._initHome();
     }
 
+
     show({element}) {
-        this._element._render();
+        this._element.showComponent._render();
         super.show();
     }
 
@@ -34,31 +36,31 @@ export class PagesContentComponent extends BaseComponent {
     }
 
     _initSkills() {
-        this.skills = new SkillsComponent({
+        this._skills = new SkillsComponent({
             element: this._element
         })
     }
 
     _initSandbox() {
-        this.skills = new SandboxComponent({
+        this._sandbox = new SandboxComponent({
             element: this._element
         })
     }
 
     _initProjects() {
-        this.skills = new ProjectsComponent({
+        this._projects = new ProjectsComponent({
             element: this._element
         })
     }
 
     _initPortfolio() {
-        this.skills = new PortfolioComponent({
+        this._portfolio = new PortfolioComponent({
             element: this._element
         })
     }
 
     _initBlog() {
-        this.skills = new BlogComponent({
+        this._blog = new BlogComponent({
             element: this._element
         })
     }

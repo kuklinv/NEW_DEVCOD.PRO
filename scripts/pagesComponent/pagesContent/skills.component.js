@@ -7,6 +7,8 @@ export class SkillsComponent extends BaseComponent{
         super({element});
         this._render();
     }
+
+
     _render() {
         this._element.innerHTML = `
                 <div class="divPanel page-content">
