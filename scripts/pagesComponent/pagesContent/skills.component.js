@@ -50,7 +50,6 @@ export class SkillsComponent extends BaseComponent {
     </div>
 </div>
 
-<!--https://getbootstrap.com/docs/4.0/components/carousel/#via-javascript-->
 
 <!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">-->
 <!--    <ol class="carousel-indicators">-->
@@ -62,19 +61,19 @@ export class SkillsComponent extends BaseComponent {
 <!--    </ol>-->
 <!--    <div class="carousel-inner">-->
 <!--        <div class="carousel-item active">-->
-<!--            <img class="d-block w-100 active" src="./carousel/jsruJS.jpg" alt="First slide">-->
+<!--            <img class="d-block w-100 active" src="../../../images/carousel/jsru.jpg" alt="First slide">-->
 <!--        </div>-->
 <!--        <div class="carousel-item">-->
-<!--            <img class="d-block w-100" src="./carousel/geekBrains%20-certificate-WebDev.jpg" alt="Second slide">-->
+<!--            <img class="d-block w-100" src="../../../images/carousel/linux.pdf" alt="Second slide">-->
 <!--        </div>-->
 <!--        <div class="carousel-item">-->
-<!--            <img class="d-block w-100" src="./carousel/stepik-certificate-Git_basics.pdf" alt="Third slide">-->
+<!--            <img class="d-block w-100" src="../../../images/carousel/git.pdf" alt="Third slide">-->
 <!--        </div>-->
 <!--        <div class="carousel-item">-->
-<!--            <img class="d-block w-100" src="./carousel/stepik-certificate-73-Linux.pdf" alt="Fourth slide">-->
+<!--            <img class="d-block w-100" src="../../../images/carousel/gb.jpg" alt="Fourth slide">-->
 <!--        </div>-->
 <!--        <div class="carousel-item">-->
-<!--            <img class="d-block w-100" src="./carousel/MBS.pdf" alt="Fifth slide">-->
+<!--            <img class="d-block w-100" src="../../../images/carousel/MBS.pdf" alt="Fifth slide">-->
 <!--        </div>-->
 <!--    </div>-->
 <!--    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">-->
