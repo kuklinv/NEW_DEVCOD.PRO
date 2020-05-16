@@ -1,2 +1,5 @@
 # devcode.pro
-my developer page
+
+## my page as developer
+
+**its my site on components design**
