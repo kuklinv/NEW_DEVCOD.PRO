@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kuklinv/NEW_DEVCOD.PRO/issues"
   },
-  "homepage": "https://github.com/kuklinv/NEW_DEVCOD.PRO#readme"
+  "homepage": "https://github.com/kuklinv/NEW_DEVCOD.PRO#readme",
+  "dependencies": {
+    "@codersrank/summary": "^0.9.10"
+  }
 }
